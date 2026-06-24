@@ -784,7 +784,7 @@ static void usb_init() {
         return;
     }
 
-    usb_hid_register_device(hid_dev0, our_descriptor->descriptor, our_descriptor->descriptor_length, &ops0);
+    usb_hid_register_device(hid_dev0, boot_kb_report_descriptor, boot_kb_report_descriptor_length, &ops0);
     usb_hid_register_device(hid_dev1, config_report_descriptor, config_report_descriptor_length, &ops1);
     CHK(usb_hid_init(hid_dev0));
     CHK(usb_hid_init(hid_dev1));
